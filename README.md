@@ -1,1 +1,1 @@
-
+Simple calculator in react
