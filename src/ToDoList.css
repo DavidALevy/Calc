@@ -1,3 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lato:wght@300&family=Roboto+Slab:wght@300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato:wght@300&family=Noto+Serif&family=Roboto+Slab:wght@300&family=Sail&family=Ubuntu&display=swap');/*font-family: 'Cookie', cursive;
+font-family: 'Heebo', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Sail', cursive;
+font-family: 'Ubuntu', sans-serif; */
 body{
-    background: red;
+    background:  radial-gradient(circle, rgb(26, 182, 243), SkyBlue 50%, LightCyan 50%, SkyBlue);
+    background-size: 8px 8px;
+    box-sizing: border-box;
+}
+h1{font-family: 'Cookie',cursive;
+font-size: 70px;
+margin-left:20%;
+margin-bottom: 10px;
+margin-top: 10px;}
+
+.inputAndClear{display: flex;
+flex:row;
+align-items: center;
+margin-bottom:2vh;
+margin-left: 15%;;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.removeAllButton{border-radius: 1px;
+margin-left:1em;
+height: 5vh;
+border:purple solid 2px}
+
+
+input[type="text"]{
+    height:5vh;
+    min-width: 45vw;
+    background-color: white;
+    border:0px;
+    color: black;
+    border:black solid 2px;
+    
+font-size: 1.2em;
+
+
+margin-left: 2.4vw;
+ 
+}
+ ul li{height:5vh;
+    min-width: 30vw;
+    
+    width:fit-content;
+    
+    
+    color: black;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 4vh;    
+ margin-right: 1em;   
+margin-top: 0;
+margin-bottom: 0;
+}
+.list1{margin-right:1em;
+    
+background-color: white;
+
+}
+
+
+.listAndButton{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    width:80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.removeButton{
+    height: 5vh;
+    border:purple solid 2px;
+    border-radius: 1px;
 }

@@ -8,6 +8,7 @@ const Calc=()=>{
     const handleClick = (e)=>{
 setResult(result.concat(e.target.name));
     } 
+    
     const clear=()=>{
         setResult("")
     };

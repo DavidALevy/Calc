@@ -1,5 +1,6 @@
 import React from "react"
 import { useState } from 'react'
+import "./ToDoList.css"
 
 
 const ToDoList = () => {    
@@ -9,44 +10,48 @@ const ToDoList = () => {
     const addHandler = () => {
         let storeditems = [...items]
         storeditems.push(input)
-        setitems(storeditems)
+        setitems(storeditems) 
+        
     }
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            let storeditems = [...items]
+            storeditems.push(input)
+            setitems(storeditems)
+        }}
 
     const removeHandler = (index) => {
         let storeditems = [...items]
         storeditems.splice(index,1)
         setitems(storeditems)
     }
-    // const removeAllHandler = (index) => {
-    //     let storeditems = [...items]
-    //     storeditems.splice(index,(items.length))
-    //     setitems(storeditems)
-    // }
-
+    const clear=()=>{
+        setitems([])              
+    };
+    
     return (
         <div>
             <h1>To Do List</h1>
+            <header className="inputAndClear">                      
+                <input type="text" id="input"  placeholder="<click> or press <enter> to submit"
+                onChange={(event) => setInput(event.target.value)}
+                onClick={addHandler}
+                onKeyDown={handleKeyDown}         
+                />
+                <div><button onClick={clear} className="removeAllButton">delete all</button></div>
+            </header>
 
-            <input type="text" onChange={(event) => setInput(event.target.value)}/>
-
-            <button onClick={addHandler}>type on the left and hit this button to add to your list</button>
-
-            {items.map((item, index) => {
+            {items.map((item, index) => { 
                 return (
-                <div key={index}>
-                <h2>{item}</h2>
-                 <button onClick={() => removeHandler(index,1)}>remove</button>
+                <div key={index} className="listAndButton">
+                    <form className="list1"><ul>
+                <li className="items">{item}</li></ul></form>
+                 <button className="removeButton"onClick={() => removeHandler(index,1)}>delete</button>
                 </div>
                   )
                 })}     
 
-                {/* {items.map((item, index) => {
-                return (
-                <div key={index}>                
-                 <button onClick={() => removeAllHandler(index,(items.length))}>remove all</button>
-                </div>
-                  )
-                })}                         */}
+                
         </div>        
     )     
     }
