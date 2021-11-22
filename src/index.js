@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ToDoList from './ToDoList';
+import ToDoList from './Calc';
 import './ToDoList';
 
 //import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   //<React.StrictMode>
-    <ToDoList />,
+    <Calc />,
   //</React.StrictMode>,
   document.getElementById('root')
 );
