@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ToDoList from './Calc';
-import './ToDoList';
+import Calc from './Calc';
+import './Calc';
 
 //import reportWebVitals from './reportWebVitals';
 
